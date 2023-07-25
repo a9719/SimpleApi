@@ -78,5 +78,8 @@ $ cd simpleapi
 $ dotnet build
 $ dotnet run
 
-# The server will initialize on localhost
+# The server will initialize on 
+
+![Sample Image](Pictures/updated.png)
+
 ```

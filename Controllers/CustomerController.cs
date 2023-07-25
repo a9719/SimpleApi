@@ -46,7 +46,8 @@ namespace SimpleApi.Controllers
 
             customer.Id = id;
             _customerService.UpdateCustomer(existingCustomer, customer);
-            return NoContent();
+            return Ok("Customer updated successfully.");
+;
         }
 
         [HttpDelete("{id}")]
@@ -57,7 +58,8 @@ namespace SimpleApi.Controllers
                 return NotFound();
 
             _customerService.DeleteCustomer(id);
-            return NoContent();
+            return Ok("Customer Deleted successfully.");
+;
         }
 
         [HttpGet("search")]
