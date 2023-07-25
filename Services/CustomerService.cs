@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+
 public class CustomerService : ICustomerService
 {
     private readonly CustomerDbContext _dbContext;
@@ -24,10 +26,24 @@ public class CustomerService : ICustomerService
         _dbContext.SaveChanges();
     }
 
-    public void UpdateCustomer(Customer customer)
+    public void UpdateCustomer(Customer existingCustomer ,Customer customer)
+
     {
-        _dbContext.Customers.Update(customer);
-        _dbContext.SaveChanges();
+        
+
+
+         _dbContext.Entry(existingCustomer).State = EntityState.Detached;
+
+    // Update the properties of the detached entity
+    existingCustomer.FirstName = customer.FirstName; // Update other properties as needed
+    existingCustomer.LastName=customer.LastName;
+    existingCustomer.DateOfBirth=customer.DateOfBirth;
+
+    // Attach the updated entity back to the context and mark it as modified
+    _dbContext.Attach(existingCustomer).State = EntityState.Modified;
+
+    // Save the changes to persist the updated entity
+    _dbContext.SaveChanges();
     }
 
     public void DeleteCustomer(int id)

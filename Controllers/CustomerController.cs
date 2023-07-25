@@ -45,7 +45,7 @@ namespace SimpleApi.Controllers
                 return NotFound();
 
             customer.Id = id;
-            _customerService.UpdateCustomer(customer);
+            _customerService.UpdateCustomer(existingCustomer, customer);
             return NoContent();
         }
 

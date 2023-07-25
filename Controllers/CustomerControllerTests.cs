@@ -71,7 +71,7 @@ public void UpdateCustomer_ExistingCustomer_ShouldReturnNoContent()
     var updatedCustomer = new Customer { Id = 1, FirstName = "Aneesh", LastName = "Ch", DateOfBirth = new DateTime(1990, 5, 15) };
     var customerServiceMock = new Mock<ICustomerService>();
     customerServiceMock.Setup(s => s.GetCustomerById(existingCustomer.Id)).Returns(existingCustomer);
-    customerServiceMock.Setup(s => s.UpdateCustomer(updatedCustomer));
+    customerServiceMock.Setup(s => s.UpdateCustomer(existingCustomer,updatedCustomer));
     var controller = new CustomerController(customerServiceMock.Object);
 
     // Act
