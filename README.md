@@ -80,6 +80,8 @@ $ dotnet run
 
 # The server will initialize on 
 
-![Sample Image](Pictures/updated.png)
+
 
 ```
+
+![Sample Image](Pictures/updated.png)
