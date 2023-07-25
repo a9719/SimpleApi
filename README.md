@@ -84,4 +84,22 @@ $ dotnet run
 
 ```
 
+## :checkered_flag: Outputs ##
+
+# Add customer
+![Sample Image](Pictures/addcustomer.png)
+
+# Get all Customer
+![Sample Image](Pictures/getall.png)
+
+# Search customer by either first name or last name
+![Sample Image](Pictures/search.png)
+
+# Updated customer by id 
 ![Sample Image](Pictures/updated.png)
+
+# Deleted customer by id 
+![Sample Image](Pictures/Deleted.png)
+
+# Swagger Look
+![Sample Image](Pictures/swagger.png)
