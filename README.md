@@ -41,6 +41,8 @@ $ git clone https://github.com/a9719/simpleapi
 $ cd simpleapi
 $ dotnet build
 $ dotnet run
+# To Run Test
+$ dotnet test
 
 # The server will initialize on 
 
